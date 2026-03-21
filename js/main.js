@@ -213,40 +213,47 @@
 
     // 10. VANTA.NET HERO BACKGROUND
     if (document.getElementById('hero-vanta') && !prefersReducedMotion.matches) {
-      VANTA.NET({
-        el: "#hero-vanta",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xffd200,
-        backgroundColor: 0xffffff,
-        points: 8.00,
-        maxDistance: 23.00,
-        showDots: false
-      });
+      // Guard to prevent double initialization
+      if (!window.vantaHero) {
+        window.vantaHero = VANTA.NET({
+          el: "#hero-vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0xF1C721, // Llama yellow for better visibility
+          backgroundColor: 0xffffff,
+          points: 20.00, // Increased density
+          maxDistance: 20.00,
+          spacing: 15.00,
+          showDots: true // Re-enabled dots for better texture
+        });
+      }
     }
 
     // 10.1 VANTA.NET CTA BACKGROUND
     if (document.getElementById('cta-vanta') && !prefersReducedMotion.matches) {
-      VANTA.NET({
-        el: "#cta-vanta",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xffd200,
-        backgroundColor: 0xffffff,
-        points: 8.00,
-        maxDistance: 23.00,
-        showDots: false
-      });
+      if (!window.vantaCta) {
+        window.vantaCta = VANTA.NET({
+          el: "#cta-vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0xF1C721,
+          backgroundColor: 0xffffff,
+          points: 20.00,
+          maxDistance: 20.00,
+          spacing: 15.00,
+          showDots: true
+        });
+      }
     }
 
     // 9. NUMBER COUNTER ANIMATION

@@ -117,6 +117,18 @@
       font-weight: 700; 
       letter-spacing: var(--tracking-hero); 
       cursor: default;
+      position: relative; /* Ensure it stays above Vanta */
+      z-index: 1;
+    }
+
+    #hero-vanta, #cta-vanta {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
     }
     .hero-title span {
       display: inline;

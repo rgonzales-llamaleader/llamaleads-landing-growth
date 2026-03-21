@@ -213,7 +213,6 @@
 
     // 10. VANTA.NET HERO BACKGROUND
     if (document.getElementById('hero-vanta') && !prefersReducedMotion.matches) {
-      // Guard to prevent double initialization
       if (!window.vantaHero) {
         window.vantaHero = VANTA.NET({
           el: "#hero-vanta",
@@ -224,13 +223,21 @@
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0xF1C721, // Llama yellow for better visibility
+          color: 0xffbb00,
           backgroundColor: 0xffffff,
-          points: 20.00, // Increased density
-          maxDistance: 20.00,
-          spacing: 15.00,
-          showDots: true // Re-enabled dots for better texture
+          points: 12.00,
+          maxDistance: 24.00,
+          spacing: 16.00,
+          showDots: false
         });
+
+        window.addEventListener('resize', () => {
+          if (window.vantaHero) window.vantaHero.resize();
+        });
+
+        setTimeout(() => {
+          if (window.vantaHero) window.vantaHero.resize();
+        }, 500);
       }
     }
 
@@ -246,13 +253,21 @@
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          color: 0xF1C721,
+          color: 0xffbb00,
           backgroundColor: 0xffffff,
-          points: 20.00,
-          maxDistance: 20.00,
-          spacing: 15.00,
-          showDots: true
+          points: 12.00,
+          maxDistance: 24.00,
+          spacing: 16.00,
+          showDots: false
         });
+
+        window.addEventListener('resize', () => {
+          if (window.vantaCta) window.vantaCta.resize();
+        });
+
+        setTimeout(() => {
+          if (window.vantaCta) window.vantaCta.resize();
+        }, 500);
       }
     }
 

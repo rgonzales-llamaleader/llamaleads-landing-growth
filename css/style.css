@@ -215,6 +215,35 @@
 
     .cta:focus-visible { outline: 2px solid var(--amarillo); outline-offset: 2px; }
 
+    .top-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px var(--content-spacing);
+      background: linear-gradient(90deg, var(--rojo) 0%, #a80000 100%);
+      color: var(--neutro-2);
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: clamp(0.75rem, 1vw, 0.95rem);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-align: center;
+      transition: background-color 150ms, transform 250ms var(--ease-out);
+    }
+    .top-banner:hover {
+      background: linear-gradient(90deg, #b00000 0%, #7d0000 100%);
+    }
+    .top-banner:focus-visible {
+      outline: 2px solid var(--amarillo);
+      outline-offset: -3px;
+    }
+    .top-banner-arrow {
+      font-size: 0.95em;
+      line-height: 1;
+    }
+
     /* Nav */
     nav {
       position: sticky;
@@ -261,6 +290,12 @@
       .nav-links { display: flex; }
       .contact-nav { display: block; }
       .hamburger { display: none; }
+    }
+    @media(max-width: 767px) {
+      .top-banner {
+        padding: 9px 18px;
+        gap: 8px;
+      }
     }
 
     /* Base section specific styles */

@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LlamaLeads | Embudo clínico que convierte consultas en pacientes</title>
+    <link rel="icon" type="image/png" href="../assets/Isologo.png" />
+<meta name="description" content="Revisa si tu embudo clínico está perdiendo pacientes entre campañas, CRM, WhatsApp, asesores, seguimiento y ventas reales." />
+  <!-- Microsoft Clarity Tracking -->
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "vydjeoqm7c");
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --black-2: #111111;
+      --black-3: #181818;
+      --red: #C8102E;
+      --red-dark: #8f0b21;
+      --gold: #D4A017;
+      --gold-2: #F5C800;
+      --white: #FFFFFF;
+      --gray: #E8E8E8;
+      --muted: #A7A7A7;
+      --green: #2D9E2D;
+      --border: rgba(212, 160, 23, 0.28);
+      --card: rgba(255, 255, 255, 0.045);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius: 28px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(200, 16, 46, 0.18), transparent 34%),
+        radial-gradient(circle at 90% 8%, rgba(212, 160, 23, 0.18), transparent 28%),
+        linear-gradient(180deg, #050505 0%, #0A0A0A 36%, #111111 100%);
+      color: var(--white);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page-shell {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+      z-index: 0;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(10, 10, 10, 0.74);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Sora, Inter, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    
+    .brand-logo {
+      height: 54px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      display: grid;
+      place-items: center;
+      color: #111;
+      font-weight: 900;
+      box-shadow: 0 0 24px rgba(245, 200, 0, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 15px 22px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #070707;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 16px 44px rgba(245, 200, 0, 0.22);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 22px 60px rgba(245, 200, 0, 0.34);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.13);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--border);
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .hero {
+      padding: 82px 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border);
+      background: rgba(212, 160, 23, 0.08);
+      color: #f6d76b;
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 18px rgba(45, 158, 45, 0.8);
+    }
+
+    h1, h2, h3 {
+      font-family: Sora, Inter, sans-serif;
+      margin: 0;
+      letter-spacing: -0.055em;
+      line-height: 1.02;
+    }
+
+    h1 {
+      font-size: clamp(44px, 6vw, 78px);
+      margin-top: 20px;
+    }
+
+    h1 span {
+      color: var(--gold-2);
+    }
+
+    .hero-copy {
+      color: var(--gray);
+      font-size: 19px;
+      line-height: 1.65;
+      margin: 24px 0 0;
+      max-width: 660px;
+    }
+
+    .hero-copy strong {
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .microcopy {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 14px;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 640px;
+    }
+
+    .proof-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .proof-card b {
+      display: block;
+      color: var(--white);
+      font-size: 22px;
+      letter-spacing: -0.04em;
+    }
+
+    .proof-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .vsl-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .vsl-card::before {
+      content: "VSL PRINCIPAL";
+      position: absolute;
+      top: -14px;
+      left: 24px;
+      background: var(--black);
+      border: 1px solid var(--border);
+      color: var(--gold-2);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      border-radius: 22px;
+      background:
+        linear-gradient(rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.75)),
+        radial-gradient(circle at 30% 20%, rgba(245, 200, 0, 0.35), transparent 28%),
+        linear-gradient(135deg, #1a1a1a, #050505);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .video-placeholder iframe,
+    .video-placeholder video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 22px;
+    }
+
+    .play {
+      width: 78px;
+      height: 78px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      color: #111;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      font-size: 28px;
+      box-shadow: 0 0 60px rgba(245, 200, 0, 0.32);
+    }
+
+    .video-placeholder h3 {
+      font-size: clamp(22px, 2vw, 30px);
+      margin-bottom: 8px;
+    }
+
+    .video-placeholder p {
+      max-width: 420px;
+      margin: 0 auto;
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .vsl-caption {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      margin-top: 14px;
+      padding: 12px 4px 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-tight { padding: 58px 0; }
+
+    .section-header {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    .section-tag {
+      color: var(--gold-2);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4vw, 56px);
+    }
+
+    .section-header p {
+      color: var(--gray);
+      font-size: 18px;
+      margin: 18px 0 0;
+      max-width: 720px;
+    }
+
+    .warning-box {
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(212, 160, 23, 0.12), rgba(200, 16, 46, 0.08));
+      border-radius: var(--radius);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .warning-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(245, 200, 0, 0.14);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+    }
+
+    .warning-box h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .warning-box p {
+      margin: 0;
+      color: var(--gray);
+      font-size: 17px;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: auto -50px -80px auto;
+      width: 160px;
+      height: 160px;
+      background: rgba(212, 160, 23, 0.09);
+      border-radius: 999px;
+      filter: blur(6px);
+    }
+
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p {
+      color: var(--gray);
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .red-line {
+      border-color: rgba(200, 16, 46, 0.35);
+      background: linear-gradient(180deg, rgba(200, 16, 46, 0.08), rgba(255, 255, 255, 0.035));
+    }
+
+    .gold-line {
+      border-color: var(--border);
+      background: linear-gradient(180deg, rgba(212, 160, 23, 0.09), rgba(255, 255, 255, 0.035));
+    }
+
+    .mechanism {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .flow-step {
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 16px 12px;
+      min-height: 106px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flow-step small {
+      color: var(--gold-2);
+      font-weight: 900;
+      letter-spacing: 0.06em;
+    }
+
+    .flow-step b {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .cards-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .icon-card {
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(245, 200, 0, 0.1);
+      border: 1px solid var(--border);
+      color: var(--gold-2);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .icon-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .icon-card p {
+      margin: 0;
+      color: var(--gray);
+    }
+
+    .case-box {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: center;
+      border-radius: 34px;
+      padding: 36px;
+      background:
+        radial-gradient(circle at 12% 20%, rgba(45, 158, 45, 0.22), transparent 28%),
+        linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035));
+      border: 1px solid rgba(45, 158, 45, 0.24);
+      box-shadow: var(--shadow);
+    }
+
+    .metric-jump {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .metric {
+      border-radius: 26px;
+      padding: 24px;
+      background: rgba(0, 0, 0, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .metric strong {
+      display: block;
+      font-family: Sora, Inter, sans-serif;
+      font-size: clamp(34px, 5vw, 58px);
+      letter-spacing: -0.07em;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .arrow {
+      color: var(--gold-2);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .case-copy h2 {
+      font-size: clamp(30px, 3vw, 44px);
+      margin-bottom: 14px;
+    }
+
+    .case-copy p {
+      color: var(--gray);
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--gray);
+    }
+
+    .check b {
+      color: var(--white);
+    }
+
+    .check::before {
+      content: "✓";
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(45, 158, 45, 0.14);
+      color: #72d672;
+      font-size: 12px;
+      font-weight: 900;
+      margin-top: 2px;
+    }
+
+    .cta-band {
+      border-radius: 36px;
+      padding: 42px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(245, 200, 0, 0.18), transparent 35%),
+        linear-gradient(135deg, rgba(200, 16, 46, 0.18), rgba(255, 255, 255, 0.05));
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta-band h2 {
+      font-size: clamp(34px, 4vw, 52px);
+    }
+
+    .cta-band p {
+      color: var(--gray);
+      font-size: 18px;
+      margin: 16px 0 0;
+    }
+
+    .chat-preview {
+      background: rgba(0, 0, 0, 0.26);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 18px;
+    }
+
+    .chat-bubble {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px 18px 18px 4px;
+      padding: 14px;
+      color: var(--gray);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .chat-bubble.gold {
+      background: rgba(212, 160, 23, 0.14);
+      border-color: var(--border);
+      color: var(--white);
+    }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .list-box {
+      border-radius: var(--radius);
+      padding: 28px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .list-box h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .list-box ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      color: var(--gray);
+    }
+
+    .list-box li {
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .list-box li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      color: var(--gold-2);
+      font-weight: 900;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 18px 20px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--white);
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    details p {
+      color: var(--gray);
+      margin: 12px 0 0;
+    }
+
+    footer {
+      padding: 42px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: #25D366;
+      color: #FFFFFF;
+      box-shadow: 0 18px 45px rgba(37, 211, 102, 0.34), 0 0 0 8px rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .floating-wa:hover {
+      transform: translateY(-3px) scale(1.03);
+      background: #1FC45F;
+      box-shadow: 0 22px 55px rgba(37, 211, 102, 0.42), 0 0 0 10px rgba(37, 211, 102, 0.14);
+    }
+
+    .floating-wa svg {
+      width: 34px;
+      height: 34px;
+      display: block;
+      fill: currentColor;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links { display: none; }
+      .hero-grid,
+      .split-grid,
+      .case-box,
+      .cta-band,
+      .two-col-list {
+        grid-template-columns: 1fr;
+      }
+      .hero { padding-top: 56px; }
+      .hero-proof,
+      .cards-3,
+      .cards-4 {
+        grid-template-columns: 1fr;
+      }
+      .flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .metric-jump {
+        grid-template-columns: 1fr;
+      }
+      .arrow { transform: rotate(90deg); text-align: center; }
+    }
+
+    @media (max-width: 640px) {
+      .container,
+      .nav-inner { width: min(100% - 28px, var(--max)); }
+      .hero-actions .btn { width: 100%; }
+      .warning-box { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .card,
+      .icon-card,
+      .cta-band,
+      .case-box { padding: 24px; }
+      .vsl-caption { grid-template-columns: 1fr; }
+      .floating-wa { right: 14px; bottom: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    LANDING PUERTA B — CLÍNICAS / EMBUDO
+    Reemplazos clave:
+    1. Cambiar todos los enlaces https://wa.me/51976955633?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20del%20embudo%20cl%C3%ADnico%20y%20quiero%20revisar%20d%C3%B3nde%20se%20est%C3%A1n%20perdiendo%20oportunidades%20en%20mi%20cl%C3%ADnica. por tu link real de WhatsApp o wa.link.
+    2. En el bloque .video-placeholder, reemplazar el contenido por tu iframe de Vimeo/YouTube/Wistia o por un <video>.
+    3. Ajustar el caso 2.7x → 9.7x si quieres usar otro caso más clínico o más cercano al vertical.
+    4. Ajustar logos/testimonios si luego deseas agregar prueba social visual.
+  -->
+
+  <div class="page-shell">
+    <div class="noise"></div>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="LlamaLeads"><img class="brand-logo" src="../assets/logowhite.png" alt="LlamaLeads Logo" /></a>
+        <div class="nav-links">
+          <a href="#video">Continuar análisis</a>
+          <a href="#mecanismo">El embudo</a>
+          <a href="#sistema-growth">Sistema completo</a>
+          <a href="#cta-final">Revisar embudo</a>
+        </div>
+        <a class="btn btn-secondary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=clinicas-embudo" target="_blank" rel="noopener noreferrer">Quiero revisar mi embudo clínico</a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Para clínicas que ya vieron el análisis inicial</div>
+            <h1>Tu clínica ya genera consultas. Ahora necesitas saber dónde se pierden antes de convertirse en <span>pacientes reales.</span></h1>
+            <p class="hero-copy">
+              Si ya viste que el problema no es solo “más leads”, el siguiente paso es revisar el embudo completo: campañas, CRM, WhatsApp, asesores, seguimiento, citas y ventas. <strong>Ahí es donde se detecta si tu sistema está convirtiendo o solo generando actividad.</strong>
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=clinicas-embudo" target="_blank" rel="noopener noreferrer">Quiero revisar mi embudo clínico →</a>
+              <a class="btn btn-secondary" href="#video">Continuar el análisis</a>
+            </div>
+            <p class="microcopy">Esta versión es para quienes ya tienen contexto y quieren mirar el embudo con más precisión antes de decidir el siguiente paso.</p>
+
+            <div class="hero-proof" aria-label="Indicadores de confianza">
+              <div class="proof-card">
+                <b>Embudo completo</b>
+                <span>Campañas, CRM, asesores y ventas</span>
+              </div>
+              <div class="proof-card">
+                <b>Feedback loop</b>
+                <span>Marketing aprende de ventas reales</span>
+              </div>
+              <div class="proof-card">
+                <b>1 chat</b>
+                <span>Para ubicar la primera fuga</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vsl-card" id="video">
+            <div class="video-placeholder">
+              <!-- REEMPLAZAR ESTE BLOQUE POR TU VSL -->
+              <!-- Ejemplo YouTube:
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="VSL LlamaLeads Clínicas" allowfullscreen></iframe>
+              -->
+              <!-- Ejemplo Vimeo:
+              <iframe src="https://player.vimeo.com/video/VIDEO_ID" title="VSL LlamaLeads Clínicas" allowfullscreen></iframe>
+              -->
+              <div>
+                <div class="play">▶</div>
+                <h3>Espacio para tu VSL</h3>
+                <p>Coloca aquí el video de continuidad donde explicas cómo revisar el embudo clínico completo: campañas, CRM, asesores, seguimiento y ventas.</p>
+              </div>
+            </div>
+            <div class="vsl-caption">
+              <span>Recomendado: 60–90 segundos. Tono de continuidad: “ya entendiste el problema, ahora veamos el embudo”.</span>
+              <a class="btn btn-primary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=clinicas-embudo" target="_blank" rel="noopener noreferrer">Revisar embudo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="container">
+          <div class="warning-box">
+            <div class="warning-icon">⚠️</div>
+            <div>
+              <h3>Ya entendiste la primera idea. Ahora viene lo importante.</h3>
+              <p>
+                No basta con saber que una campaña generó leads. La pregunta es qué pasó después: quién respondió, qué asesor tomó el lead, si hubo seguimiento, si se agendó una cita, si asistió y si terminó pagando. Sin esa cadena, marketing y ventas trabajan con información incompleta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">La fuga del embudo</div>
+            <h2>Tu embudo puede parecer activo mientras los pacientes se pierden entre etapas.</h2>
+            <p>
+              Después de ver contenido o visitar la web, el lead suele entender que “más leads” no siempre resuelve el problema. La pregunta ahora es más específica: ¿en qué etapa se está rompiendo la conversión entre consulta, contacto, cita, asistencia y pago?
+            </p>
+          </div>
+
+          <div class="split-grid">
+            <div class="card red-line">
+              <h3>Lo que el reporte muestra</h3>
+              <p>Leads generados, mensajes recibidos, CPL aceptable, campañas activas y movimiento comercial aparente.</p>
+            </div>
+            <div class="card gold-line">
+              <h3>Lo que el embudo esconde</h3>
+              <p>No se mide con claridad qué campaña generó pacientes reales, qué asesor convirtió mejor, qué seguimiento recuperó leads y qué información debe volver a marketing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section mechanism" id="mecanismo">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">El embudo</div>
+            <h2>Conectamos campañas, CRM, asesores y ventas para saber dónde se rompe la conversión.</h2>
+            <p>
+              El objetivo de esta landing no es explicarte todo LlamaLeads otra vez. Es mostrarte qué revisaríamos en el embudo clínico para entender si el problema está en adquisición, contacto, seguimiento, equipo comercial, CRM o señal de retorno.
+            </p>
+          </div>
+
+          <div class="flow">
+            <div class="flow-step"><small>01</small><b>Campaña</b></div>
+            <div class="flow-step"><small>02</small><b>Lead / consulta</b></div>
+            <div class="flow-step"><small>03</small><b>CRM</b></div>
+            <div class="flow-step"><small>04</small><b>Asesor</b></div>
+            <div class="flow-step"><small>05</small><b>Seguimiento</b></div>
+            <div class="flow-step"><small>06</small><b>Cita / asistencia</b></div>
+            <div class="flow-step"><small>07</small><b>Venta / paciente</b></div>
+            <div class="flow-step"><small>08</small><b>Feedback a marketing</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sistema-growth">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Sistema de growth clínico</div>
+            <h2>No corregimos solo anuncios. Corregimos la cadena completa que convierte consultas en pacientes.</h2>
+            <p>
+              En esta etapa, el valor no está en decirte “haz más pauta”. Está en ordenar el sistema comercial: cómo se registra el lead, cómo responde el equipo, qué seguimiento existe, qué automatizaciones recuperan oportunidades y qué información vuelve a marketing.
+            </p>
+          </div>
+
+          <div class="cards-4">
+            <div class="icon-card">
+              <div class="icon">01</div>
+              <h3>CRM clínico</h3>
+              <p>Instalamos o adaptamos el CRM al caso de uso de la clínica: etapas, campos, fuentes, asesores, citas, pacientes y razones de pérdida.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">02</div>
+              <h3>Asesores medidos</h3>
+              <p>Revisamos tiempos de respuesta, calidad de contacto, seguimiento, avance por etapa y conversión por asesor.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">03</div>
+              <h3>Automatización</h3>
+              <p>Activamos confirmaciones, recordatorios, recontactos, recuperación de no respondidos y flujos para reducir fugas.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">04</div>
+              <h3>Feedback loop</h3>
+              <p>Conectamos lo que ventas aprende con lo que marketing necesita para optimizar campañas hacia pacientes reales.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="revisamos">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Qué revisaríamos en tu embudo</div>
+            <h2>No optimizamos campañas antes de entender qué está pasando con los leads después de llegar.</h2>
+            <p>
+              Para esta etapa del tráfico, asumimos que ya hay un mínimo de contexto. Por eso vamos directo a las piezas que suelen explicar por qué una clínica recibe consultas, pero no logra convertirlas de forma predecible.
+            </p>
+          </div>
+
+          <div class="cards-3">
+            <div class="icon-card">
+              <div class="icon">01</div>
+              <h3>Trazabilidad del lead</h3>
+              <p>Si sabes qué fuente, campaña o anuncio generó la consulta y qué pasó luego con ese lead dentro del CRM.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">02</div>
+              <h3>Performance comercial</h3>
+              <p>Si tus asesores responden rápido, califican bien, hacen seguimiento y empujan al siguiente paso con criterio consistente.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">03</div>
+              <h3>Señal y aprendizaje</h3>
+              <p>Si marketing recibe feedback de ventas reales o si sigue optimizando con señales incompletas como leads, clics o mensajes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="container">
+          <div class="case-box">
+            <div class="metric-jump">
+              <div class="metric">
+                <strong>2.7x</strong>
+                <span>ROAS inicial</span>
+              </div>
+              <div class="arrow">→</div>
+              <div class="metric">
+                <strong>9.7x</strong>
+                <span>ROAS posterior</span>
+              </div>
+            </div>
+            <div class="case-copy">
+              <h2>El salto no viene solo de más pauta. Viene de cerrar el loop.</h2>
+              <p>
+                Cuando el CRM, el seguimiento y la data comercial alimentan la estrategia de adquisición, el sistema deja de operar por intuición. La campaña, el equipo y la dirección empiezan a mirar el mismo mapa: qué genera pacientes reales y qué solo genera actividad.
+              </p>
+              <div class="check-list">
+                <div class="check"><span><b>Antes:</b> marketing, CRM y ventas trabajando con información separada.</span></div>
+                <div class="check"><span><b>Después:</b> lectura de campaña, asesor, seguimiento, cita y venta en una misma lógica.</span></div>
+                <div class="check"><span><b>Resultado:</b> mejores decisiones comerciales sin depender únicamente de subir inversión.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Señales de que tu embudo necesita revisión</div>
+            <h2>Si ya viste contenido sobre growth, CRM o conversión, estas son las señales que deberían hacerte revisar el sistema completo.</h2>
+          </div>
+
+          <div class="cards-3">
+            <div class="icon-card">
+              <div class="icon">A</div>
+              <h3>Marketing y ventas no miran lo mismo</h3>
+              <p>Marketing reporta leads; ventas reporta “calidad”; dirección mira ventas finales. Pero no existe una lectura integrada.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">B</div>
+              <h3>Asesores sin medición clara</h3>
+              <p>No sabes quién responde mejor, quién da seguimiento, qué guion convierte o dónde se pierde cada tipo de lead.</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon">C</div>
+              <h3>CRM como agenda, no como centro de control</h3>
+              <p>Hay contactos y etapas, pero no suficiente información para tomar decisiones de adquisición, seguimiento y conversión.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight" id="cta-final">
+        <div class="container">
+          <div class="cta-band">
+            <div>
+              <div class="section-tag">Revisa tu embudo clínico</div>
+              <h2>Entra al chat y dinos qué parte del embudo quieres entender primero.</h2>
+              <p>
+                Como ya vienes con más contexto, el chat no empieza desde cero. Empieza identificando qué parte del sistema quieres revisar: campañas, CRM, asesores, seguimiento, citas o ventas.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=clinicas-embudo" target="_blank" rel="noopener noreferrer">Quiero revisar mi embudo clínico →</a>
+                <a class="btn btn-secondary" href="#faq">Ver preguntas frecuentes</a>
+              </div>
+              <p class="microcopy">Primer contacto: ubicar la fuga principal antes de proponer una reunión o solución.</p>
+            </div>
+
+            <div class="chat-preview" aria-label="Vista previa del chat">
+              <div class="chat-bubble gold">Hola. Vi que quieres revisar tu embudo clínico.</div>
+              <div class="chat-bubble">Para darte una lectura útil, dime por dónde crees que se está fugando la conversión:</div>
+              <div class="chat-bubble gold">¿Campañas, CRM, asesores, seguimiento, citas o cierre?</div>
+              <div class="chat-bubble">Con eso te digo qué revisaríamos primero y si tiene sentido verlo en una sesión.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Para quién tiene sentido</div>
+            <h2>Esto es para clínicas que ya tienen movimiento y quieren convertir el embudo en un sistema medible.</h2>
+            <p>Esta página no está pensada para explicar lo básico. Está pensada para clínicas que ya reciben consultas y quieren entender qué parte del sistema limita el crecimiento.</p>
+          </div>
+
+          <div class="two-col-list">
+            <div class="list-box gold-line">
+              <h3>Es para ti si...</h3>
+              <ul>
+                <li>Ya inviertes en Meta Ads, Google Ads o campañas digitales.</li>
+                <li>Recibes leads, pero no tienes claridad de qué fuente genera pacientes reales.</li>
+                <li>Tienes asesores, recepción o equipo comercial atendiendo consultas.</li>
+                <li>Quieres medir mejor el performance del equipo comercial y su impacto en ventas.</li>
+                <li>Quieres que marketing y ventas tengan un feedback loop claro.</li>
+              </ul>
+            </div>
+            <div class="list-box red-line">
+              <h3>No es para ti si...</h3>
+              <ul>
+                <li>No tienes consultas, presupuesto activo ni intención real de ordenar adquisición.</li>
+                <li>Buscas solo “más contenido” o “más anuncios” sin revisar ventas, CRM o seguimiento.</li>
+                <li>No quieres medir qué pasa después de que el lead llega al chat.</li>
+                <li>Necesitas una solución aislada sin tocar proceso comercial.</li>
+                <li>Solo quieres comparar precios sin revisar el sistema.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Preguntas frecuentes</div>
+            <h2>Lo que normalmente pregunta una clínica cuando ya entendió que el problema puede estar en el embudo.</h2>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>¿Esto significa que tengo que cambiar de proveedor de anuncios?</summary>
+              <p>No necesariamente. Primero hay que entender si el problema está en la ejecución del proveedor, en la señal que recibe el algoritmo, en el CRM, en los tiempos de respuesta o en el proceso comercial. Cambiar de proveedor sin revisar la arquitectura puede hacer que el mismo problema se repita.</p>
+            </details>
+            <details>
+              <summary>¿Tengo que cambiar mi CRM?</summary>
+              <p>No de entrada. Lo primero es revisar si el CRM actual permite registrar y leer las señales importantes: fuente, campaña, estado del lead, cita, asistencia, venta, asesor responsable y seguimiento. Si se puede ordenar sobre lo que ya tienes, se prioriza eso.</p>
+            </details>
+            <details>
+              <summary>¿Qué pasa si mi problema es el equipo de ventas?</summary>
+              <p>Puede ser parte del problema, pero no se asume sin datos. Revisamos tiempos de respuesta, calidad de conversación, seguimiento, etapas del pipeline y razones de pérdida. Muchas veces el equipo no falla por capacidad, sino porque opera sin sistema claro.</p>
+            </details>
+            <details>
+              <summary>¿Por qué no piden datos primero?</summary>
+              <p>Porque para tráfico frío pedir nombre, correo y teléfono de inmediato rompe la promesa. Primero buscamos hacer una pregunta útil que te ayude a mirar tu embudo desde otro ángulo. Después, si tiene sentido avanzar, pedimos los datos necesarios.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="container">
+          <div class="warning-box">
+            <div class="warning-icon">→</div>
+            <div>
+              <h3>La pregunta no es si tu embudo se mueve.</h3>
+              <p>
+                La pregunta es si cada etapa está empujando al paciente correcto hacia la siguiente acción. Si quieres saber dónde se está fugando la conversión, inicia el chat y lo revisamos.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=clinicas-embudo" target="_blank" rel="noopener noreferrer">Quiero revisar mi embudo clínico →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="brand"><img class="brand-logo" src="../assets/logowhite.png" alt="LlamaLeads Logo" /></div>
+        <span>Growth Marketing · CRM · Automatización · Performance Comercial · Revenue Systems</span>
+      </div>
+    </footer>
+
+    <a class="floating-wa" href="https://wa.me/51976955633?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20del%20embudo%20cl%C3%ADnico%20y%20quiero%20revisar%20d%C3%B3nde%20se%20est%C3%A1n%20perdiendo%20oportunidades%20en%20mi%20cl%C3%ADnica." aria-label="Iniciar chat por WhatsApp" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M16.02 3.2C8.97 3.2 3.25 8.86 3.25 15.82c0 2.23.6 4.41 1.73 6.32L3.2 28.8l6.86-1.76a12.9 12.9 0 0 0 5.96 1.49c7.05 0 12.78-5.66 12.78-12.62S23.07 3.2 16.02 3.2Zm0 22.92c-1.88 0-3.72-.5-5.32-1.44l-.38-.22-4.07 1.04 1.08-3.92-.25-.4a10.1 10.1 0 0 1-1.57-5.36c0-5.64 4.72-10.22 10.51-10.22s10.51 4.58 10.51 10.22-4.72 10.3-10.51 10.3Zm5.76-7.66c-.32-.16-1.86-.9-2.15-1-.29-.1-.5-.16-.72.16-.21.31-.82 1-.99 1.21-.18.21-.36.24-.67.08-.32-.16-1.34-.49-2.55-1.55-.94-.83-1.58-1.86-1.76-2.17-.18-.31-.02-.48.14-.64.14-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.7-.98-2.33-.26-.61-.52-.53-.72-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.06-1.1 2.59s1.13 3.01 1.29 3.22c.16.21 2.22 3.34 5.38 4.68.75.32 1.34.51 1.8.65.76.24 1.45.21 1.99.13.61-.09 1.86-.75 2.12-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.61-.37Z" />
+    </svg>
+  </a>
+  </div>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>LlamaLeads | Embudo wellness que convierte consultas en reservas y ventas</title>
     <link rel="icon" type="image/png" href="../assets/Isologo.png" />
 <meta name="description" content="Revisa si tu embudo wellness está perdiendo oportunidades entre campañas, CRM, WhatsApp, asesoraas, seguimiento, reservas, tratamientos y ventas reales." />
@@ -820,7 +821,40 @@
       .two-col-list {
         grid-template-columns: 1fr;
       }
-      .hero { padding-top: 56px; }
+      .hero {
+        padding-top: 22px;
+        padding-bottom: 34px;
+      }
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+      }
+      .hero-content { display: contents; }
+      .eyebrow { order: 1; }
+      h1 {
+        order: 2;
+        margin-top: -10px;
+      }
+      .vsl-card {
+        order: 3;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .hero-copy {
+        order: 4;
+        margin-top: 0;
+      }
+      .hero-actions {
+        order: 5;
+        margin-top: 0;
+      }
+      .microcopy { order: 6; }
+      .hero-proof {
+        order: 7;
+        margin-top: 2px;
+      }
       .hero-proof,
       .cards-3,
       .cards-4 {
@@ -837,7 +871,48 @@
 
     @media (max-width: 640px) {
       .container,
-      .nav-inner { width: min(100% - 28px, var(--max)); }
+      .nav-inner {
+        width: auto;
+        max-width: calc(100vw - 28px);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .nav-inner {
+        padding: 10px 0;
+        gap: 12px;
+      }
+      .brand-logo { height: 38px; }
+      .nav-inner > .btn { display: none; }
+      .eyebrow {
+        font-size: 10px;
+        max-width: 100%;
+        padding: 7px 10px;
+        white-space: normal;
+      }
+      h1 {
+        font-size: clamp(28px, 8.4vw, 36px);
+        line-height: 1.03;
+        letter-spacing: -0.045em;
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+      .vsl-card {
+        border-radius: 20px;
+        max-width: 100%;
+        min-width: 0;
+        padding: 8px;
+      }
+      .vsl-card::before {
+        top: -11px;
+        left: 16px;
+        font-size: 9px;
+        padding: 5px 8px;
+      }
+      .video-placeholder,
+      .video-placeholder iframe,
+      .video-placeholder video {
+        border-radius: 15px;
+      }
       .hero-actions .btn { width: 100%; }
       .warning-box { grid-template-columns: 1fr; }
       .flow { grid-template-columns: 1fr; }
@@ -880,7 +955,7 @@
     <main id="top">
       <section class="hero">
         <div class="container hero-grid">
-          <div>
+          <div class="hero-content">
             <div class="eyebrow">Para centros wellness que ya vieron el análisis inicial</div>
             <h1>Tu centro ya genera consultas. Ahora necesitas saber dónde se pierden antes de convertirse en <span>reservas, tratamientos y ventas reales.</span></h1>
             <p class="hero-copy">
@@ -911,18 +986,7 @@
 
           <div class="vsl-card" id="video">
             <div class="video-placeholder">
-              <!-- REEMPLAZAR ESTE BLOQUE POR TU VSL -->
-              <!-- Ejemplo YouTube:
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="VSL LlamaLeads Wellness" allowfullscreen></iframe>
-              -->
-              <!-- Ejemplo Vimeo:
-              <iframe src="https://player.vimeo.com/video/VIDEO_ID" title="VSL LlamaLeads Wellness" allowfullscreen></iframe>
-              -->
-              <div>
-                <div class="play">▶</div>
-                <h3>Espacio para tu VSL</h3>
-                <p>Coloca aquí el video de continuidad donde explicas cómo revisar el embudo wellness completo: campañas, CRM, asesoraas, seguimiento, reservas y ventas.</p>
-              </div>
+              <iframe src="https://www.youtube.com/embed/ZG4sBzqnlqM?rel=0&amp;modestbranding=1&amp;playsinline=1" title="VSL LlamaLeads Wellness" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="vsl-caption">
               <span>Recomendado: 60–90 segundos. Tono de continuidad: “ya entendiste el problema, ahora veamos el embudo”.</span>

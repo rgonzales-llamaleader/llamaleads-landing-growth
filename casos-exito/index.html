@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casos de Growth en Acción | LlamaLeads</title>
-    <link rel="icon" type="image/png" href="../assets/Isologo.png" />
-<meta name="description" content="Casos reales de LlamaLeads conectando marketing, CRM, automatización y equipos comerciales para convertir más oportunidades en ventas reales." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Casos de éxito | LlamaLeads</title>
+  <link rel="icon" type="image/png" href="../assets/Isologo.png" />
+  <meta name="description" content="Casos reales de LlamaLeads conectando marketing, CRM, WhatsApp, seguimiento y equipos comerciales para convertir más oportunidades en ventas reales." />
   <!-- Microsoft Clarity Tracking -->
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -16,996 +17,206 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --black: #0A0A0A;
-      --black-2: #111111;
-      --black-3: #181818;
-      --red: #C8102E;
-      --gold: #D4A017;
-      --gold-2: #F5C800;
-      --white: #FFFFFF;
-      --gray: #E8E8E8;
-      --muted: #A7A7A7;
-      --green: #2D9E2D;
-      --border: rgba(212, 160, 23, 0.28);
-      --card: rgba(255, 255, 255, 0.048);
-      --radius: 28px;
-      --max: 1160px;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--white);
-      background:
-        radial-gradient(circle at 8% 2%, rgba(200, 16, 46, 0.18), transparent 32%),
-        radial-gradient(circle at 88% 5%, rgba(212, 160, 23, 0.18), transparent 30%),
-        linear-gradient(180deg, #050505 0%, #0A0A0A 38%, #111111 100%);
-      line-height: 1.5;
-      overflow-x: hidden;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .noise {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.16;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.42'/%3E%3C/svg%3E");
-      mix-blend-mode: soft-light;
-      z-index: 0;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 40px));
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(10, 10, 10, 0.78);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-inner {
-      width: min(var(--max), calc(100% - 40px));
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 18px 0;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-family: Sora, Inter, sans-serif;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-    }
-
-    
-    .brand-logo {
-      height: 54px;
-      width: auto;
-      display: block;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 11px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      color: #090909;
-      font-weight: 900;
-      box-shadow: 0 0 24px rgba(245, 200, 0, 0.22);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .nav-links a:hover { color: var(--white); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border-radius: 999px;
-      padding: 15px 22px;
-      font-weight: 850;
-      font-size: 14px;
-      letter-spacing: -0.01em;
-      border: 1px solid transparent;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      color: #070707;
-      box-shadow: 0 18px 54px rgba(245, 200, 0, 0.23);
-    }
-
-    .btn-primary:hover { box-shadow: 0 22px 68px rgba(245, 200, 0, 0.34); }
-
-    .btn-secondary {
-      color: var(--white);
-      background: rgba(255,255,255,0.06);
-      border-color: rgba(255,255,255,0.12);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.09);
-      border-color: var(--border);
-    }
-
-    .hero {
-      padding: 82px 0 62px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(212,160,23,0.08);
-      color: #f6d76b;
-      padding: 9px 13px;
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--green);
-      box-shadow: 0 0 18px rgba(45,158,45,0.8);
-    }
-
-    h1, h2, h3 {
-      font-family: Sora, Inter, sans-serif;
-      margin: 0;
-      letter-spacing: -0.055em;
-      line-height: 1.02;
-    }
-
-    h1 {
-      font-size: clamp(44px, 6vw, 78px);
-      margin-top: 20px;
-    }
-
-    h1 span, h2 span { color: var(--gold-2); }
-
-    .hero-copy {
-      color: var(--gray);
-      font-size: 19px;
-      line-height: 1.65;
-      margin: 24px 0 0;
-      max-width: 720px;
-    }
-
-    .hero-copy strong { color: var(--white); }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 30px;
-      align-items: center;
-    }
-
-    .microcopy {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 14px;
-    }
-
-    .hero-panel {
-      background:
-        radial-gradient(circle at 20% 10%, rgba(245, 200, 0, 0.16), transparent 35%),
-        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.035));
-      border: 1px solid var(--border);
-      border-radius: 34px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-panel::before {
-      content: "RESULTADOS REALES";
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      border-radius: 999px;
-      padding: 7px 10px;
-      background: rgba(0,0,0,0.32);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--gold-2);
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .1em;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .stat {
-      min-height: 142px;
-      background: rgba(0,0,0,0.24);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 24px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .stat strong {
-      display: block;
-      font-family: Sora, Inter, sans-serif;
-      font-size: clamp(32px, 4vw, 54px);
-      letter-spacing: -0.07em;
-      line-height: .95;
-      color: var(--white);
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 750;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-    }
-
-    .section {
-      padding: 82px 0;
-      position: relative;
-    }
-
-    .section-tight { padding: 58px 0; }
-
-    .section-line {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.022);
-    }
-
-    .section-header {
-      max-width: 850px;
-      margin-bottom: 34px;
-    }
-
-    .section-tag {
-      color: var(--gold-2);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    h2 { font-size: clamp(34px, 4vw, 56px); }
-
-    .section-header p {
-      color: var(--gray);
-      font-size: 18px;
-      margin: 18px 0 0;
-      max-width: 760px;
-    }
-
-    .thesis-box {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 24px;
-      align-items: stretch;
-      border-radius: 34px;
-      padding: 34px;
-      background:
-        radial-gradient(circle at 82% 20%, rgba(200, 16, 46, 0.16), transparent 32%),
-        linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035));
-      border: 1px solid rgba(255,255,255,0.11);
-      box-shadow: var(--shadow);
-    }
-
-    .thesis-main {
-      border-radius: 28px;
-      padding: 28px;
-      background: rgba(0,0,0,0.22);
-      border: 1px solid var(--border);
-    }
-
-    .thesis-main h3 {
-      font-size: clamp(28px, 3vw, 40px);
-      margin-bottom: 14px;
-    }
-
-    .thesis-main p { color: var(--gray); margin: 0; }
-
-    .check-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .check {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: var(--gray);
-      background: rgba(255,255,255,0.045);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 18px;
-      padding: 14px;
-    }
-
-    .check::before {
-      content: "✓";
-      width: 22px;
-      height: 22px;
-      flex: 0 0 22px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: rgba(45, 158, 45, 0.14);
-      color: #72d672;
-      font-size: 12px;
-      font-weight: 900;
-      margin-top: 1px;
-    }
-
-    .case-nav {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .case-card {
-      position: relative;
-      overflow: hidden;
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      padding: 26px;
-      min-height: 310px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-    }
-
-    .case-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--border);
-      background: rgba(255,255,255,0.065);
-    }
-
-    .case-card::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      right: -70px;
-      bottom: -90px;
-      border-radius: 999px;
-      background: rgba(212,160,23,0.09);
-      filter: blur(8px);
-    }
-
-    .case-label {
-      display: inline-flex;
-      width: fit-content;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(212,160,23,0.08);
-      color: var(--gold-2);
-      padding: 6px 9px;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .case-card h3 {
-      font-size: 27px;
-      margin-bottom: 12px;
-    }
-
-    .case-card p {
-      color: var(--gray);
-      margin: 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .case-card .mini-metric {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 6px;
-      margin-top: 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mini-metric strong {
-      font-family: Sora, Inter, sans-serif;
-      font-size: 34px;
-      letter-spacing: -0.06em;
-      color: var(--gold-2);
-    }
-
-    .mini-metric span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-    }
-
-    .case-detail {
-      margin-top: 28px;
-      border-radius: 36px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
-      overflow: hidden;
-      box-shadow: 0 24px 70px rgba(0,0,0,0.32);
-    }
-
-    .case-detail-head {
-      display: grid;
-      grid-template-columns: 1fr .9fr;
-      gap: 24px;
-      padding: 34px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background:
-        radial-gradient(circle at 85% 20%, rgba(245, 200, 0, 0.13), transparent 33%),
-        rgba(0,0,0,0.14);
-    }
-
-    .case-detail-head h3 {
-      font-size: clamp(30px, 3.4vw, 50px);
-      margin-top: 12px;
-    }
-
-    .case-detail-head p {
-      color: var(--gray);
-      font-size: 17px;
-      margin: 16px 0 0;
-    }
-
-    .metrics-strip {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      align-self: stretch;
-    }
-
-    .metric-box {
-      background: rgba(0,0,0,0.25);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px;
-      padding: 20px;
-      min-height: 132px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .metric-box strong {
-      font-family: Sora, Inter, sans-serif;
-      font-size: 38px;
-      letter-spacing: -0.065em;
-      line-height: .95;
-    }
-
-    .metric-box span {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-    }
-
-    .case-body {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      padding: 26px 34px 34px;
-    }
-
-    .body-card {
-      background: rgba(255,255,255,0.045);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 24px;
-      padding: 22px;
-    }
-
-    .body-card h4 {
-      margin: 0 0 12px;
-      font-family: Sora, Inter, sans-serif;
-      letter-spacing: -0.04em;
-      font-size: 20px;
-    }
-
-    .body-card ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    .body-card li {
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .body-card li::before {
-      content: "•";
-      position: absolute;
-      left: 4px;
-      color: var(--gold-2);
-      font-weight: 900;
-    }
-
-    .cta-band {
-      border-radius: 38px;
-      padding: 42px;
-      border: 1px solid var(--border);
-      background:
-        radial-gradient(circle at 82% 12%, rgba(245, 200, 0, 0.18), transparent 34%),
-        linear-gradient(135deg, rgba(200, 16, 46, 0.18), rgba(255,255,255,0.05));
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 28px;
-      align-items: center;
-      box-shadow: var(--shadow);
-    }
-
-    .cta-band h2 { font-size: clamp(34px, 4vw, 54px); }
-    .cta-band p { color: var(--gray); font-size: 18px; margin: 16px 0 0; }
-
-    .chat-preview {
-      background: rgba(0,0,0,0.28);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 28px;
-      padding: 18px;
-    }
-
-    .bubble {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 18px 18px 18px 4px;
-      padding: 14px;
-      color: var(--gray);
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-
-    .bubble.gold {
-      background: rgba(212,160,23,0.14);
-      border-color: var(--border);
-      color: var(--white);
-    }
-
-    footer {
-      padding: 42px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .floating-wa {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 30;
-      width: 64px;
-      height: 64px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: #25D366;
-      color: #FFFFFF;
-      box-shadow: 0 18px 45px rgba(37, 211, 102, 0.34), 0 0 0 8px rgba(37, 211, 102, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.32);
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-    }
-
-    .floating-wa:hover {
-      transform: translateY(-3px) scale(1.03);
-      background: #1FC45F;
-      box-shadow: 0 22px 55px rgba(37, 211, 102, 0.42), 0 0 0 10px rgba(37, 211, 102, 0.14);
-    }
-
-    .floating-wa svg {
-      width: 34px;
-      height: 34px;
-      display: block;
-      fill: currentColor;
-    }
-
-    @media (max-width: 980px) {
-      .nav-links { display: none; }
-      .hero-grid,
-      .thesis-box,
-      .case-detail-head,
-      .cta-band {
-        grid-template-columns: 1fr;
-      }
-      .case-nav,
-      .case-body {
-        grid-template-columns: 1fr;
-      }
-      .hero { padding-top: 56px; }
-    }
-
-    @media (max-width: 640px) {
-      .container, .nav-inner { width: min(100% - 28px, var(--max)); }
-      .hero-actions .btn { width: 100%; }
-      .stat-grid, .metrics-strip { grid-template-columns: 1fr; }
-      .hero-panel, .thesis-box, .case-detail-head, .case-body, .cta-band { padding: 24px; }
-      .floating-wa { right: 14px; bottom: 14px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/casos-exito-vsl.css">
 </head>
 <body>
-  <!--
-    LANDING ÚNICA DE CASE STUDIES — LLAMALEADS
-    Reemplazos:
-    1. Cambiar https://wa.me/51976955633?text=Hola%2C%20vi%20los%20casos%20de%20%C3%A9xito%20de%20LlamaLeads%20y%20quiero%20revisar%20si%20algo%20similar%20aplica%20para%20mi%20negocio. por el link real de WhatsApp.
-    2. Enlace de agenda conectado al calendario real.
-    3. Agregar logos/clientes solo si tienes autorización.
-    4. Si necesitas anonimizar más, deja los rubros como están: Spa Premium, Centro Deportivo, Gimnasio Boutique.
-  -->
+  <div class="grain" aria-hidden="true"></div>
 
-  <div class="noise"></div>
-
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#top" aria-label="LlamaLeads"><img class="brand-logo" src="../assets/logowhite.png" alt="LlamaLeads Logo" /></a>
-      <div class="nav-links">
-        <a href="#casos">Casos</a>
-        <a href="#sistema">Sistema</a>
-        <a href="#cta-final">Revisar mi caso</a>
-      </div>
-      <a class="btn btn-secondary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Quiero revisar mi caso</a>
-    </div>
+  <nav class="mobile-nav" aria-label="Navegación principal">
+    <a class="nav-icon" href="../" aria-label="Volver al inicio">‹</a>
+    <a class="brand" href="#top" aria-label="LlamaLeads">
+      <img src="../assets/logowhite.png" alt="LlamaLeads" />
+    </a>
+    <a class="nav-cta" href="https://wa.me/51976955633?text=Hola%2C%20vi%20los%20casos%20de%20%C3%A9xito%20de%20LlamaLeads%20y%20quiero%20revisar%20si%20algo%20similar%20aplica%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" aria-label="Iniciar chat por WhatsApp">
+      <span>WA</span>
+    </a>
   </nav>
 
   <main id="top">
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Growth Systems en acción</div>
-          <h1>Casos reales donde el problema no era solo generar más leads. Era <span>convertirlos mejor.</span></h1>
-          <p class="hero-copy">
-            En LlamaLeads trabajamos con negocios que ya tienen movimiento comercial, pero necesitan conectar <strong>marketing, CRM, asesores, seguimiento, automatización y data</strong> para convertir más oportunidades en ventas reales.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Quiero revisar mi caso →</a>
-            <a class="btn btn-secondary" href="#casos">Ver casos reales</a>
-          </div>
-          <p class="microcopy">Esta página está diseñada para entender cómo pensamos, qué fugas solemos encontrar y cómo convertimos campañas aisladas en sistemas comerciales medibles.</p>
-        </div>
+      <div class="hero-inner">
+        <p class="eyebrow">Casos reales de growth</p>
+        <h1>Convierte consultas en clientes que agendan, llegan y pagan.</h1>
+        <p class="hero-copy">En 4 minutos verás cómo detectamos fugas entre anuncio, WhatsApp, CRM, agenda y caja.</p>
 
-        <div class="hero-panel">
-          <div class="stat-grid">
-            <div class="stat">
-              <strong>+31.6%</strong>
-              <span>Facturación promedio mensual</span>
-            </div>
-            <div class="stat">
-              <strong>S/200k</strong>
-              <span>Adicionales en 7 meses</span>
-            </div>
-            <div class="stat">
-              <strong>2.7x → 9.7x</strong>
-              <span>ROAS en 4 meses</span>
-            </div>
-            <div class="stat">
-              <strong>-79%</strong>
-              <span>Costo por lead</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-tight section-line" id="sistema">
-      <div class="container">
-        <div class="thesis-box">
-          <div class="thesis-main">
-            <div class="section-tag">La tesis</div>
-            <h3>No ganamos por “hacer más anuncios”. Ganamos cuando el sistema completo aprende a convertir.</h3>
-            <p>
-              En la mayoría de negocios que revisamos, la fuga no está en una sola parte. Está en la desconexión entre campañas, CRM, equipo comercial, seguimiento y medición.
-            </p>
-          </div>
-          <div class="check-list">
-            <div class="check">Marketing mide leads, pero no siempre pacientes, alumnos o ventas reales.</div>
-            <div class="check">Ventas siente que los leads no convierten, pero no siempre hay data por asesor, etapa o canal.</div>
-            <div class="check">El CRM existe o se implementa, pero no siempre opera como centro de control comercial.</div>
-            <div class="check">Dirección necesita saber qué corregir primero: campaña, seguimiento, asesor, oferta, canal o proceso.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="casos">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Casos principales</div>
-          <h2>El patrón se repite: cuando el sistema se ordena, la inversión empieza a rendir mejor.</h2>
-          <p>
-            Estos casos muestran distintos escenarios: negocios con equipo comercial, negocios con estacionalidad fuerte, negocios con expansión y negocios que dependían demasiado de referidos o acciones sueltas.
-          </p>
-        </div>
-
-        <div class="case-nav">
-          <a href="#spa" class="case-card">
-            <div>
-              <span class="case-label">Spa & Bienestar</span>
-              <h3>Más facturación con solo +6.7% de aumento en pauta</h3>
-              <p>El crecimiento se construyó desde proceso comercial, seguimiento, CRM, automatización y data.</p>
-            </div>
-            <div class="mini-metric">
-              <strong>+31.6%</strong>
-              <span>Facturación promedio mensual</span>
-            </div>
-          </a>
-
-          <a href="#deportivo" class="case-card">
-            <div>
-              <span class="case-label">Centro Deportivo</span>
-              <h3>De interés diario a ingresos más predecibles</h3>
-              <p>Se estandarizó el embudo y se mejoró la conversión del equipo comercial en temporada alta.</p>
-            </div>
-            <div class="mini-metric">
-              <strong>+20%</strong>
-              <span>Facturación mensual</span>
-            </div>
-          </a>
-
-          <a href="#boutique" class="case-card">
-            <div>
-              <span class="case-label">Gimnasio Boutique</span>
-              <h3>Expansión con sistema, no solo con referidos</h3>
-              <p>Se conectó adquisición, seguimiento, medición por sede y retroalimentación de data.</p>
-            </div>
-            <div class="mini-metric">
-              <strong>9.7x</strong>
-              <span>ROAS al mes 4</span>
-            </div>
-          </a>
-        </div>
-
-        <article class="case-detail" id="spa">
-          <div class="case-detail-head">
-            <div>
-              <span class="case-label">Caso 1 · Spa Premium</span>
-              <h3>Cómo impulsamos +31.6% de crecimiento en facturación promedio mensual.</h3>
-              <p>
-                Negocio de spa premium con múltiples sedes en Lima. Tenía contenidos e identidad visual sólida, pero el sistema comercial no lograba convertir la inversión publicitaria en crecimiento sostenido.
-              </p>
-            </div>
-            <div class="metrics-strip">
-              <div class="metric-box"><strong>+31.6%</strong><span>Crecimiento promedio mensual</span></div>
-              <div class="metric-box"><strong>S/200k</strong><span>Adicionales en 7 meses</span></div>
-              <div class="metric-box"><strong>+S/1.7M</strong><span>Facturación acumulada</span></div>
-              <div class="metric-box"><strong>+134%</strong><span>Crecimiento interanual del mejor mes</span></div>
-            </div>
-          </div>
-          <div class="case-body">
-            <div class="body-card">
-              <h4>El desafío</h4>
-              <ul>
-                <li>Embudo sin etapas claras.</li>
-                <li>Seguimiento débil y no sistematizado.</li>
-                <li>Canales dispersos sin integración.</li>
-                <li>Sin visibilidad de KPIs por sede.</li>
-                <li>Data de campañas desconectada de ventas.</li>
-              </ul>
-            </div>
-            <div class="body-card">
-              <h4>Lo que trabajamos</h4>
-              <ul>
-                <li>Optimización del embudo comercial.</li>
-                <li>Automatizaciones de filtración y calificación.</li>
-                <li>Capacitación a asesores.</li>
-                <li>Dashboards de marketing y ventas.</li>
-                <li>Retroalimentación de data vía Conversions API.</li>
-              </ul>
-            </div>
-            <div class="body-card">
-              <h4>La lectura</h4>
-              <ul>
-                <li>El crecimiento no vino solo de más pauta.</li>
-                <li>La inversión publicitaria aumentó solo +6.7%.</li>
-                <li>Por cada sol adicional en ads, se generaron ~S/75 en facturación adicional.</li>
-                <li>El retorno vino del sistema comercial.</li>
-              </ul>
-            </div>
+        <article class="vsl" id="video" aria-label="Video de análisis de casos">
+          <div class="vsl-frame">
+            <iframe
+              src="https://www.youtube.com/embed/ZG4sBzqnlqM?rel=0&amp;modestbranding=1&amp;playsinline=1"
+              srcdoc="&lt;style&gt;*{box-sizing:border-box}body{margin:0;height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 68% 22%,rgba(242,196,32,.26),transparent 30%),linear-gradient(135deg,#17130b,#050505 56%,#111)}.wrap{width:100%;height:100%;display:grid;place-items:center;color:#f8f4e8;font-family:Inter,Arial,sans-serif;text-align:center;position:relative;overflow:hidden}.wrap:before{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(255,255,255,.08),transparent 42%),repeating-linear-gradient(90deg,rgba(242,196,32,.10) 0 1px,transparent 1px 34px);opacity:.55}.play{position:relative;z-index:1;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;margin:auto;background:linear-gradient(180deg,#ffe898,#f2c420 62%,#bd8615);box-shadow:0 18px 50px rgba(242,196,32,.34);color:#070604;font-size:28px;font-weight:900}.txt{position:absolute;left:18px;right:18px;bottom:18px;z-index:1;text-align:left}.txt b{display:block;font-size:18px;line-height:1.1}.txt span{display:block;margin-top:6px;color:rgba(248,244,232,.7);font-size:12px}.tag{position:absolute;top:14px;left:14px;z-index:1;padding:7px 10px;border-radius:999px;background:#f2c420;color:#070604;font-size:10px;font-weight:900;text-transform:uppercase}&lt;/style&gt;&lt;a class='wrap' href='https://www.youtube.com/embed/ZG4sBzqnlqM?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1'&gt;&lt;span class='tag'&gt;VSL 4 min&lt;/span&gt;&lt;span class='play'&gt;▶&lt;/span&gt;&lt;span class='txt'&gt;&lt;b&gt;Mira el análisis completo&lt;/b&gt;&lt;span&gt;Anuncio · WhatsApp · CRM · Agenda · Venta&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;"
+              title="VSL LlamaLeads casos de éxito"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
           </div>
         </article>
 
-        <article class="case-detail" id="deportivo">
-          <div class="case-detail-head">
-            <div>
-              <span class="case-label">Caso 2 · Centro Deportivo</span>
-              <h3>Cómo aumentamos la facturación mensual y mejoramos el conversion rate comercial.</h3>
-              <p>
-                Centro deportivo de natación y gimnasia con más de 100 interesados diarios. El reto era aprovechar mejor cada lead, reducir fugas y estandarizar el resultado del equipo comercial.
-              </p>
-            </div>
-            <div class="metrics-strip">
-              <div class="metric-box"><strong>+20%</strong><span>Facturación mensual</span></div>
-              <div class="metric-box"><strong>+S/161k</strong><span>Adicionales en temporada alta</span></div>
-              <div class="metric-box"><strong>857%</strong><span>Incremento CR natación</span></div>
-              <div class="metric-box"><strong>1153%</strong><span>Incremento CR gimnasia</span></div>
-            </div>
-          </div>
-          <div class="case-body">
-            <div class="body-card">
-              <h4>El desafío</h4>
-              <ul>
-                <li>Alto volumen de interesados diarios.</li>
-                <li>Necesidad de convertir mejor el interés en ingresos.</li>
-                <li>Seguimiento comercial con fugas.</li>
-                <li>Industria muy impactada por estacionalidad.</li>
-              </ul>
-            </div>
-            <div class="body-card">
-              <h4>Lo que trabajamos</h4>
-              <ul>
-                <li>Embudo con etapas y responsables.</li>
-                <li>Automatizaciones de calificación y nutrición.</li>
-                <li>Integración de WhatsApp API, Facebook, Instagram, Email y formularios.</li>
-                <li>Dashboards integrados de marketing y ventas.</li>
-              </ul>
-            </div>
-            <div class="body-card">
-              <h4>La lectura</h4>
-              <ul>
-                <li>No bastaba generar demanda.</li>
-                <li>Había que estandarizar cómo se atendía, seguía y convertía cada lead.</li>
-                <li>La mejora vino de proceso, medición y disciplina comercial.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+        <a class="primary-cta" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Quiero que revisen mi caso</a>
 
-        <article class="case-detail" id="boutique">
-          <div class="case-detail-head">
-            <div>
-              <span class="case-label">Caso 3 · Gimnasio Boutique Premium</span>
-              <h3>Cómo multiplicamos el ROAS por 3.6x y llevamos el negocio a récord histórico.</h3>
-              <p>
-                Gimnasio boutique premium con 2 sedes consolidadas y tercera sede recién abierta. Tenía propuesta diferenciada y base de referidos, pero sin sistema comercial estructurado para capitalizar la expansión.
-              </p>
-            </div>
-            <div class="metrics-strip">
-              <div class="metric-box"><strong>2.7x → 9.7x</strong><span>ROAS en 4 meses</span></div>
-              <div class="metric-box"><strong>-79%</strong><span>Costo por lead</span></div>
-              <div class="metric-box"><strong>+600%</strong><span>Volumen de leads</span></div>
-              <div class="metric-box"><strong>+140%</strong><span>Crecimiento interanual del mejor mes</span></div>
-            </div>
-          </div>
-          <div class="case-body">
-            <div class="body-card">
-              <h4>El desafío</h4>
-              <ul>
-                <li>Sin fuerza de ventas dedicada.</li>
-                <li>Campañas activas sin seguimiento ni calificación.</li>
-                <li>Tercera sede sin estrategia definida de adquisición.</li>
-                <li>Dependencia fuerte de referidos orgánicos.</li>
-              </ul>
-            </div>
-            <div class="body-card">
-              <h4>Lo que trabajamos</h4>
-              <ul>
-                <li>Implementación de fuerza de ventas y seguimiento.</li>
-                <li>Embudo por sede con responsables y métricas.</li>
-                <li>Audiencias por perfil de cliente ideal.</li>
-                <li>Atribución para medir origen real de clientes nuevos.</li>
-                <li>Dashboards por sede, fuente y resultado.</li>
-              </ul>
-            </div>
-            <div class="body-card">
-              <h4>La lectura</h4>
-              <ul>
-                <li>El problema no era solo presupuesto.</li>
-                <li>Faltaba sistema para convertir inversión en ventas reales.</li>
-                <li>La tercera sede pudo integrarse al sistema desde el arranque.</li>
-                <li>El negocio quedó con base para escalar con retorno más previsible.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+        <div class="proof-strip" aria-label="Resultados destacados">
+          <span><b>2.7x → 9.7x</b> ROAS</span>
+          <span><b>+31.6%</b> crecimiento</span>
+          <span><b>-79%</b> costo por lead</span>
+        </div>
 
-
-    <section class="section-tight" id="cta-final">
-      <div class="container">
-        <div class="cta-band">
+        <div class="data-ribbon" aria-label="Datos adicionales de casos">
           <div>
-            <div class="section-tag">Siguiente paso</div>
-            <h2>Si alguno de estos patrones se parece a tu negocio, revisemos dónde está la fuga.</h2>
-            <p>
-              El objetivo no es venderte una solución genérica. Es entender si tu problema está en adquisición, CRM, seguimiento, equipo comercial, automatizaciones, data o en la conexión entre todas esas partes.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Quiero revisar mi caso →</a>
-              <a class="btn btn-secondary" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Agendar revisión</a>
-            </div>
+            <strong>S/200k</strong>
+            <span>adicionales en 7 meses</span>
           </div>
-          <div class="chat-preview">
-            <div class="bubble gold">Hola, vi los casos y quiero revisar si algo similar pasa en mi negocio.</div>
-            <div class="bubble">Perfecto. Para darte una lectura útil, dime qué se parece más a tu caso:</div>
-            <div class="bubble gold">¿Leads que no convierten, equipo comercial sin medición, CRM desordenado o marketing y ventas desconectados?</div>
-            <div class="bubble">Con eso te digo qué revisaríamos primero.</div>
+          <div>
+            <strong>+S/1.7M</strong>
+            <span>facturación acumulada</span>
+          </div>
+          <div>
+            <strong>+600%</strong>
+            <span>volumen de leads</span>
+          </div>
+          <div>
+            <strong>+140%</strong>
+            <span>crecimiento interanual</span>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="signal-summary" aria-label="Resumen de señales revisadas">
+      <p class="section-kicker">Datos que sí importan</p>
+      <h2>La campaña no puede aprender de ventas si el sistema solo le devuelve clics.</h2>
+      <div class="signal-lines">
+        <p><b>Marketing</b> debe saber qué canal trae consultas con intención real.</p>
+        <p><b>WhatsApp</b> debe medir velocidad, seguimiento y recuperación.</p>
+        <p><b>CRM</b> debe cerrar el circuito entre lead, cita, asistencia y venta.</p>
+      </div>
+    </section>
+
+    <section class="flow-section" id="sistema">
+      <div class="section-head">
+        <p class="section-kicker">Dónde se pierde la venta</p>
+        <h2>El problema rara vez es solo el anuncio.</h2>
+        <p>Cuando marketing, WhatsApp, CRM y ventas no se hablan, el negocio puede comprar más leads y aun así perder dinero en la mitad del camino.</p>
+      </div>
+
+      <ol class="journey" aria-label="Recorrido comercial">
+        <li>
+          <span>Anuncio</span>
+          <em>Buen clic</em>
+          <small>Costo por lead, intención y origen.</small>
+        </li>
+        <li class="leak">
+          <span>WhatsApp</span>
+          <em>Respuesta tarde</em>
+          <small>Tiempo de contacto, siguiente paso y recontacto.</small>
+        </li>
+        <li class="leak">
+          <span>CRM</span>
+          <em>Dato incompleto</em>
+          <small>Estado del lead, asesor, fuente y etapa.</small>
+        </li>
+        <li>
+          <span>Agenda</span>
+          <em>Cita frágil</em>
+          <small>Confirmación, recordatorio y asistencia.</small>
+        </li>
+        <li class="win">
+          <span>Venta</span>
+          <em>Señal real</em>
+          <small>Pago, ticket, recompra y retorno por canal.</small>
+        </li>
+      </ol>
+    </section>
+
+    <section class="cases" id="casos">
+      <div class="section-head">
+        <p class="section-kicker">Lo que pasó en operación real</p>
+        <h2>No fue más pauta. Fue mejor señal.</h2>
+      </div>
+
+      <article class="case-story">
+        <span class="case-label">Spa premium</span>
+        <h3>Más facturación con solo +6.7% de aumento en pauta.</h3>
+        <p>Se ordenó el embudo comercial, seguimiento, CRM, automatización y tableros por sede. La inversión empezó a aprender de oportunidades reales.</p>
+        <div class="case-metrics">
+          <strong>+31.6%</strong>
+          <span>Facturación promedio mensual</span>
+        </div>
+      </article>
+
+      <article class="case-story">
+        <span class="case-label">Centro deportivo</span>
+        <h3>De interés diario a ingresos más predecibles.</h3>
+        <p>Con alto volumen de interesados, el salto vino de estandarizar atención, nutrición, seguimiento y lectura comercial por etapa.</p>
+        <div class="case-metrics">
+          <strong>+S/161k</strong>
+          <span>Adicionales en temporada alta</span>
+        </div>
+      </article>
+
+      <article class="case-story">
+        <span class="case-label">Gimnasio boutique</span>
+        <h3>Expansión con sistema, no solo con referidos.</h3>
+        <p>Se conectó adquisición, seguimiento, atribución y medición por sede para capitalizar una nueva apertura con más control.</p>
+        <div class="case-metrics">
+          <strong>9.7x</strong>
+          <span>ROAS al cuarto mes</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="compare">
+      <div class="section-head">
+        <p class="section-kicker">La lectura correcta</p>
+        <h2>Lo que parece pasar no siempre es lo que está pasando.</h2>
+      </div>
+
+      <div class="compare-row">
+        <div>
+          <span>Parece</span>
+          <p>“Necesitamos más leads, más presupuesto o cambiar de proveedor.”</p>
+        </div>
+        <div>
+          <span>Suele ser</span>
+          <p>El sistema no distingue quién solo pregunta de quién agenda, llega y paga.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="review">
+      <div class="section-head">
+        <p class="section-kicker">Qué revisaríamos primero</p>
+        <h2>Tres puntos antes de tocar presupuesto.</h2>
+      </div>
+
+      <div class="review-list">
+        <div>
+          <b>Calidad real del lead</b>
+          <p>Si la campaña atrae intención de compra o solo curiosidad de precio.</p>
+        </div>
+        <div>
+          <b>Velocidad del WhatsApp</b>
+          <p>Si el lead recibe respuesta, seguimiento y siguiente paso antes de enfriarse.</p>
+        </div>
+        <div>
+          <b>Señal de venta real</b>
+          <p>Si Ads y CRM aprenden de agenda, asistencia, venta y recompra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="cta-final">
+      <p class="section-kicker">Siguiente paso</p>
+      <h2>¿Quieres saber dónde se fuga tu crecimiento?</h2>
+      <p>Entra a WhatsApp o agenda una revisión. Partimos por una pregunta de diagnóstico y luego vemos qué conviene revisar primero.</p>
+      <a class="primary-cta" href="https://wa.me/51976955633?text=Hola%2C%20vi%20los%20casos%20de%20%C3%A9xito%20de%20LlamaLeads%20y%20quiero%20revisar%20si%20algo%20similar%20aplica%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Iniciar diagnóstico por WhatsApp</a>
+      <a class="secondary-cta" href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Agendar revisión</a>
     </section>
   </main>
 
   <footer>
-      <div class="container footer-inner">
-        <div class="brand"><img class="brand-logo" src="../assets/logowhite.png" alt="LlamaLeads Logo" /></div>
-      <span>Growth Marketing · CRM · Automatización · Conversión Comercial · Revenue Systems</span>
-    </div>
+    <img src="../assets/logowhite.png" alt="LlamaLeads" />
+    <p>Growth Marketing · CRM · WhatsApp · Conversión Comercial</p>
   </footer>
 
   <a class="floating-wa" href="https://wa.me/51976955633?text=Hola%2C%20vi%20los%20casos%20de%20%C3%A9xito%20de%20LlamaLeads%20y%20quiero%20revisar%20si%20algo%20similar%20aplica%20para%20mi%20negocio." aria-label="Iniciar chat por WhatsApp" target="_blank" rel="noopener noreferrer">
@@ -1013,5 +224,19 @@
       <path d="M16.02 3.2C8.97 3.2 3.25 8.86 3.25 15.82c0 2.23.6 4.41 1.73 6.32L3.2 28.8l6.86-1.76a12.9 12.9 0 0 0 5.96 1.49c7.05 0 12.78-5.66 12.78-12.62S23.07 3.2 16.02 3.2Zm0 22.92c-1.88 0-3.72-.5-5.32-1.44l-.38-.22-4.07 1.04 1.08-3.92-.25-.4a10.1 10.1 0 0 1-1.57-5.36c0-5.64 4.72-10.22 10.51-10.22s10.51 4.58 10.51 10.22-4.72 10.3-10.51 10.3Zm5.76-7.66c-.32-.16-1.86-.9-2.15-1-.29-.1-.5-.16-.72.16-.21.31-.82 1-.99 1.21-.18.21-.36.24-.67.08-.32-.16-1.34-.49-2.55-1.55-.94-.83-1.58-1.86-1.76-2.17-.18-.31-.02-.48.14-.64.14-.14.32-.36.48-.54.16-.18.21-.31.32-.52.11-.21.05-.39-.03-.55-.08-.16-.72-1.7-.98-2.33-.26-.61-.52-.53-.72-.54h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.06-1.1 2.59s1.13 3.01 1.29 3.22c.16.21 2.22 3.34 5.38 4.68.75.32 1.34.51 1.8.65.76.24 1.45.21 1.99.13.61-.09 1.86-.75 2.12-1.47.26-.72.26-1.34.18-1.47-.08-.13-.29-.21-.61-.37Z" />
     </svg>
   </a>
+
+  <div class="sticky-cta">
+    <a href="https://link.llamaleads.pro/widget/booking/G7HNNfDaLVXLsOxCJmaI?utm_source=casos-exito" target="_blank" rel="noopener noreferrer">Revisar mi caso</a>
+  </div>
+
+  <script>
+    const stickyCta = document.querySelector('.sticky-cta');
+    const toggleStickyCta = () => {
+      stickyCta.classList.toggle('is-visible', window.scrollY > 520);
+    };
+
+    toggleStickyCta();
+    window.addEventListener('scroll', toggleStickyCta, { passive: true });
+  </script>
 </body>
 </html>

@@ -44,6 +44,7 @@ body {
 img,
 iframe,
 video,
+wistia-player,
 svg {
   display: block;
   max-width: 100%;
@@ -231,11 +232,13 @@ h1 {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(245, 197, 24, 0.14);
 }
 
-.vsl-frame iframe {
+.vsl-frame iframe,
+.vsl-frame wistia-player {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100%;
+  padding-top: 0 !important;
   border: 0;
 }
 

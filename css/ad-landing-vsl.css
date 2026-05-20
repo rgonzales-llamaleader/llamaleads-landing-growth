@@ -262,12 +262,14 @@ li {
 }
 
 .video-placeholder iframe,
-.video-placeholder video {
+.video-placeholder video,
+.video-placeholder wistia-player {
   position: absolute !important;
   inset: 0 !important;
   z-index: 2 !important;
   width: 100% !important;
   height: 100% !important;
+  padding-top: 0 !important;
   border: 0 !important;
   border-radius: 8px !important;
 }

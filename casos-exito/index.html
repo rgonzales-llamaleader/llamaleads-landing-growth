@@ -58,15 +58,16 @@
         <p class="hero-copy">En 4 minutos verás cómo detectamos fugas entre anuncio, WhatsApp, CRM, agenda y caja.</p>
 
         <article class="vsl" id="video" aria-label="Video de análisis de casos">
-          <div class="vsl-frame">
+          <div class="vsl-frame yt-embed-holder">
             <iframe
               id="case-vsl-video"
-              src="https://www.youtube.com/embed/ZG4sBzqnlqM?rel=0&amp;modestbranding=1&amp;playsinline=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;color=white"
+              src="https://www.youtube.com/embed/ZG4sBzqnlqM?rel=0&amp;modestbranding=1&amp;playsinline=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;color=white&amp;enablejsapi=1"
               title="VSL LlamaLeads casos de éxito"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen>
             </iframe>
+            <button class="vsl-hit-area" type="button" aria-label="Reproducir video"></button>
           </div>
         </article>
 
@@ -254,6 +255,22 @@
 
     toggleStickyCta();
     window.addEventListener('scroll', toggleStickyCta, { passive: true });
+
+    const vslIframe = document.querySelector('#case-vsl-video');
+    const vslHitArea = document.querySelector('.vsl-hit-area');
+    let vslIsPlaying = false;
+
+    if (vslIframe && vslHitArea) {
+      vslHitArea.addEventListener('click', () => {
+        vslIsPlaying = !vslIsPlaying;
+        vslIframe.contentWindow.postMessage(JSON.stringify({
+          event: 'command',
+          func: vslIsPlaying ? 'playVideo' : 'pauseVideo',
+          args: []
+        }), 'https://www.youtube.com');
+        vslHitArea.setAttribute('aria-label', vslIsPlaying ? 'Pausar video' : 'Reproducir video');
+      });
+    }
   </script>
 </body>
 </html>
